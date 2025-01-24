@@ -1,4 +1,4 @@
-from scripts.finance.trading_pipeline import TradingDataPipeline
+from .trading_pipeline import TradingDataPipeline
 
 if __name__ == "__main__":
     API_KEY = "your_alpha_vantage_api_key"
