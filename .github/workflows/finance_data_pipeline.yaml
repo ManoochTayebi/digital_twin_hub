@@ -1,0 +1,21 @@
+name: Finance Data Pipeline
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour
+  workflow_dispatch:
+
+jobs:
+  data_pipeline:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+    - name: Install Dependencies
+      run: pip install -r requirements.txt
+    - name: Run Trading Pipeline
+      run: python scripts/finance/main.py
