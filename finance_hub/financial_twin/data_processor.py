@@ -1,7 +1,14 @@
-import pandas as pd
+################################################################################
+###                                                                          ###
+### Created by Mahdi Manoochertayebi 2025-2026                               ###
+###                                                                          ###
+################################################################################
 
+import pandas 
+
+################################################################################
 class DataProcessor:
-    def __init__(self, raw_data_dir="data/finance/raw", processed_data_dir="data/finance/processed"):
+    def __init__(self, raw_data_dir="../data/raw", processed_data_dir="../data/processed"):
         self.raw_data_dir = raw_data_dir
         self.processed_data_dir = processed_data_dir
 
@@ -19,8 +26,8 @@ class DataProcessor:
                 "close": float(values["4. close"]),
                 "volume": int(values["5. volume"]),
             })
-        df = pd.DataFrame(rows)
-        df["timestamp"] = pd.to_datetime(df["timestamp"])
+        df = pandas.DataFrame(rows)
+        df["timestamp"] = pandas.to_datetime(df["timestamp"])
         return df
 
     def save_data(self, df, filename):

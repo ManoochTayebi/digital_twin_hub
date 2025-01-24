@@ -1,12 +1,21 @@
+################################################################################
+###                                                                          ###
+### Created by Mahdi Manoochertayebi 2025-2026                               ###
+###                                                                          ###
+################################################################################
+
 import time
+
+import financial_twin as ft
+################################################################################
 
 class TradingDataPipeline:
     def __init__(self, api_key, symbol, interval="1min", duration=60):
-        self.api = FinanceAPI(api_key)
+        self.api = ft.FinanceAPI(api_key)
         self.symbol = symbol
         self.interval = interval
         self.duration = duration
-        self.processor = DataProcessor()
+        self.processor = ft.DataProcessor()
 
     def run(self):
         """
