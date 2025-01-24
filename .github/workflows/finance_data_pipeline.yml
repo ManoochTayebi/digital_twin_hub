@@ -6,9 +6,9 @@ on:
     branches:
       - main  # This ensures the workflow runs when you push to main
 
-  # Schedule the workflow to run every hour (as you already have)
-  schedule:
-    - cron: '0 * * * *'  # Run every hour
+  # # Schedule the workflow to run every hour (as you already have)
+  # schedule:
+  #   - cron: '0 * * * *'  # Run every hour
 
   # Allow manual triggering from the GitHub UI (optional)
   workflow_dispatch:

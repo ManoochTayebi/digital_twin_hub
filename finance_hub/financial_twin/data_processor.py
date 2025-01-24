@@ -8,7 +8,7 @@ import pandas
 
 ################################################################################
 class DataProcessor:
-    def __init__(self, raw_data_dir="../data/raw", processed_data_dir="../data/processed"):
+    def __init__(self, raw_data_dir="data/raw", processed_data_dir="data/processed"):   #MMT24012025: This is the path from the file which is running this code
         self.raw_data_dir = raw_data_dir
         self.processed_data_dir = processed_data_dir
 
